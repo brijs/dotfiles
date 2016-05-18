@@ -1,16 +1,18 @@
 [
-  { "keys" : ["super+shift+o"] , "command": "prompt_add_folder" },
+    { "keys" : ["super+shift+o"] , "command": "prompt_add_folder" },
 
-  // give_focus: true
-  { "keys": ["super+k", "super+up"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
-  { "keys": ["super+k", "super+right"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
-  { "keys": ["super+k", "super+down"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
-  { "keys": ["super+k", "super+left"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
+    // give_focus: true
+    { "keys": ["super+k", "super+up"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
+    { "keys": ["super+k", "super+right"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+    { "keys": ["super+k", "super+down"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+    { "keys": ["super+k", "super+left"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
 
-  // destroy_pane self keybinding (missing in default keymap)
-  { "keys": ["super+k", "super+shift+w"], "command": "destroy_pane", "args": {"direction": "self"} },
+    // destroy_pane self keybinding (missing in default keymap)
+    { "keys": ["super+k", "super+shift+w"], "command": "destroy_pane", "args": {"direction": "self"} },
 
-  // 0.99 zoom
-  { "keys": ["super+k", "super+z"], "command": "zoom_pane", "args": {"fraction": 0.99} },
+    // 0.99 zoom
+    { "keys": ["super+k", "super+z"], "command": "zoom_pane", "args": {"fraction": 0.99} },
+
+    // custom macro: indent to 4 spaces
+    { "keys": ["super+b", "super+i"], "command": "run_macro_file", "args": {"file": "Packages/User/indent_4_spaces.sublime-macro"} }
 ]
-
