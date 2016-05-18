@@ -1,0 +1,5 @@
+{
+
+    // Dont create a new pane when switching in a direction without one
+    "create_new_pane_if_necessary": false
+}
