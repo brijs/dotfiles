@@ -16,4 +16,5 @@
     "trim_automatic_white_space": true,
     "trim_trailing_white_space_on_save": true,
     "ensure_newline_at_eof_on_save": true,
+    "binary_file_patterns":[".tmp/", "node_modules/", "bower_components/"]
 }
