@@ -16,6 +16,12 @@ function virtualenv_info(){
     [[ -n "$venv" ]] && echo "(venv:$venv) "
 }
 
+function ahead_behind {
+    curr_branch=$(git rev-parse --abbrev-ref HEAD);
+    curr_remote=$(git config branch.$curr_branch.remote);
+    curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
+    git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|';
+}
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -45,7 +51,7 @@ function prompt {
 
   local VENV="\$(virtualenv_info)";
 
-  export PS1="\n$CYANBOLD$VENV$RED\u $PURPLE@ $BLUE\h $GREEN\w $RESETCOLOR$GREENBOLD\$(git rev-parse --abbrev-ref HEAD 2> /dev/null)\n $BLUE[\#] → $RESETCOLOR"
+  export PS1="\n$CYANBOLD$VENV$RED\u $PURPLE@ $BLUE\h $GREEN\w $RESETCOLOR$GREENBOLD\$(git rev-parse --abbrev-ref HEAD 2> /dev/null) \$(ahead_behind 2>/dev/null)\n $BLUE[\#] → $RESETCOLOR"
   export PS2=" | → $RESETCOLOR"
 }
 
