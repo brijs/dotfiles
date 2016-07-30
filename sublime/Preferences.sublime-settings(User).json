@@ -1,9 +1,17 @@
 {
     "auto_indent": true,
+    "binary_file_patterns":
+    [
+        ".tmp/",
+        "node_modules/",
+        "bower_components/"
+    ],
+    "color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
     "default_line_ending": "unix",
     "detect_indentation": true,
     "draw_white_space": "all",
-    "font_size": 14,
+    "ensure_newline_at_eof_on_save": true,
+    "font_size": 12,
     "ignored_packages":
     [
         "Vintage"
@@ -11,10 +19,27 @@
     "indent_to_bracket": true,
     "smart_indent": true,
     "tab_size": 4,
+    "theme": "Boxy Tomorrow.sublime-theme",
     "translate_tabs_to_spaces": true,
-    "use_tab_stops": true,
     "trim_automatic_white_space": true,
     "trim_trailing_white_space_on_save": true,
-    "ensure_newline_at_eof_on_save": true,
-    "binary_file_patterns":[".tmp/", "node_modules/", "bower_components/"]
+    "use_tab_stops": true,
+    "bold_folder_labels": true,
+    "caret_extra_bottom": 1,
+    "caret_extra_top": 1,
+    "caret_extra_width": 1,
+    "caret_style": "blink",
+    "fade_fold_buttons": false,
+
+    "theme_accent_tangerine": true,
+    "theme_bar": true,
+    "theme_dirty_materialized": true,
+    "theme_scrollbar_colored": true,
+    "theme_scrollbar_line": true,
+    "theme_sidebar_folder_mono": true,
+    "theme_tab_arrows_hidden": true,
+    "theme_tab_line_size_lg": true,
+    "theme_tab_selected_transparent": true,
+    "theme_tab_selected_underlined": true,
+    "theme_tab_size_lg": true
 }
