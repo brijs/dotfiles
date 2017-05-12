@@ -28,7 +28,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 alias ls='ls -GFh'
 alias ll='ls -l'
-
+alias subl='subl -a'
 
 function prompt {
   local BLACK="\[\033[0;30m\]"
